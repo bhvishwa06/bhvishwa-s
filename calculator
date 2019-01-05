@@ -1,0 +1,57 @@
+#include<stdio.h>
+#include<math.h>
+void sumnum(int n1,int n2,int n3);
+void avgnum(int n1,int n2);
+void sqnum(int n1);
+
+void main()
+{
+ int n1,n2,n3,sum,ch;
+ float avg,sq;
+
+ printf(" choices as follows\n");
+ printf(" 1--Addition of numbers   \n 2-- Average of numbers  \n 3-- Square root of a number \n");
+ scanf("%d",&ch);
+  switch(ch)
+   {
+    case 1: printf(" enter 3 numbers\n");
+                scanf("%d%d%d",&n1,&n2,&n3);
+                sumnum(n1,n2,n3);
+                break;
+
+    case 2: printf(" enter 2 numbers\n");
+                scanf("%d%d",&n1,&n2);
+                avgnum(n1,n2);
+                break;     
+
+    case 3: printf(" enter a number\n");
+                scanf("%d",&n1);
+                sqnum(n1);
+                break;     
+
+    default: printf(" wrong choice \n");
+    }
+    printf(" main program completed\n");
+ }
+
+void sumnum(int n1,int n2,int n3)
+  {
+     int sum;
+     sum=n1+n2+n3;
+     printf(" the sum of given num=%d \n", sum);
+  }
+
+void avgnum( int n1,int n2)
+  {
+     float avg;
+     avg=(float)(n1+n2)/2;
+     printf(" the avg of given num=%f \n", avg);
+  }
+
+void sqnum(int n1)
+ {
+   float sq;
+   sq=(float)sqrt(n1);
+   printf(" the square root of given num=%f \n", sq);
+ }
+
